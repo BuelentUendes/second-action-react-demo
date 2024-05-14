@@ -1,15 +1,11 @@
 name: Test Project
-# Trigger name
 on: push
 jobs: 
-    # This is the name of the job
     test:
         runs-on: ubuntu-latest
         steps:
             - name: Get the code (download from the repository)
-              # uses to use actions 
               uses: actions/checkout@v3
-            # Install the requirements and dependencies
             - name: Install NodeJS
               uses: actions/setup-nodev@3
               with:
