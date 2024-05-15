@@ -17,6 +17,8 @@ jobs:
             - name: Run tests
               run: npm test
     deploy:
+        # With needs: they do not run in parallel, in brackets I can make it depended on more than one
+        needs: [test]
         runs-on: ubuntu-latest
         steps:
             - name: Get the code (download from the repository)
