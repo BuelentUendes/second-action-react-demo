@@ -1,5 +1,6 @@
 name: Deploy Project
-on: push
+# Have more than one trigger
+on: [push, workflow_dispatch]
 jobs: 
     # Name of the first job
     test:
